@@ -1,0 +1,174 @@
+/* ==========================================
+   1. 基础设置与 CSS 变量定义
+   ========================================== */
+:root {
+    --primary-color: #2563eb;
+    --text-color: #1f2937;
+    --bg-color: #f9fafb;
+    --card-bg: #ffffff;
+    --max-width: 900px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+}
+
+.container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* ==========================================
+   2. 导航栏样式
+   ========================================== */
+.navbar {
+    background-color: #ffffff;
+    border-bottom: 1px solid #e5e7eb;
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.25rem;
+    color: var(--primary-color);
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 500;
+}
+
+nav a:hover {
+    color: var(--primary-color);
+}
+
+/* ==========================================
+   3. 通用区块与 Hero 样式
+   ========================================== */
+.hero {
+    padding: 50px 0 30px 0;
+}
+
+.hero h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.section {
+    padding: 35px 0;
+}
+
+.section h2 {
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+    border-bottom: 2px solid var(--primary-color);
+    display: inline-block;
+    padding-bottom: 4px;
+}
+
+/* ==========================================
+   4. 卡片与网格布局
+   ========================================== */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background-color: var(--card-bg);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.card h3 {
+    margin-bottom: 8px;
+    font-size: 1.1rem;
+}
+
+/* ==========================================
+   5. 细节优化 (位置标签、竞赛列表、代码块等)
+   ========================================== */
+.location-tag {
+    font-size: 1.05rem;
+    color: var(--primary-color);
+    font-weight: 600;
+    margin: 8px 0 16px 0;
+}
+
+.bio {
+    font-size: 1.05rem;
+    color: #4b5563;
+}
+
+.section-desc {
+    margin-bottom: 16px;
+    color: #4b5563;
+}
+
+.achievement-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.achievement-list li {
+    background-color: var(--card-bg);
+    margin-bottom: 10px;
+    padding: 12px 18px;
+    border-radius: 6px;
+    border-left: 4px solid var(--primary-color);
+    box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+}
+
+code {
+    background-color: #eff6ff;
+    color: var(--primary-color);
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-family: monospace;
+    font-size: 1rem;
+    margin-right: 6px;
+}
+
+.contact-link {
+    margin-top: 10px;
+    font-size: 1.05rem;
+}
+
+/* ==========================================
+   6. 页脚
+   ========================================== */
+footer {
+    text-align: center;
+    padding: 30px 0;
+    margin-top: 40px;
+    border-top: 1px solid #e5e7eb;
+    font-size: 0.875rem;
+    color: #6b7280;
+}
